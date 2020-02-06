@@ -1,12 +1,13 @@
 # This code will take the Bot to the center of the
 # maze and back to the starting w/o further exploration.
 # The code is written assuming that the bot has 3 sensors to sense the walls
+# Code is for a 16x16 maze which is an international standard size.
 
 
 
 import numpy as np
 
-size = 6
+size = 16
 a = np.zeros([size, size])
 w = np.ones([4, size, size], dtype=int)
 p_x, p_y = size-1, 0
@@ -32,10 +33,10 @@ def init_a():
     for i in range(size):
         for j in range(size):
             a[i][j] = 300
-    a[3][3] = 0
-    a[2][3] = 0
-    a[3][2] = 0
-    a[2][2] = 0
+    a[8][8] = 0
+    a[7][8] = 0
+    a[8][7] = 0
+    a[7][7] = 0
 
 
 def init_w():
